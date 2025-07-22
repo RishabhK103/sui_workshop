@@ -76,14 +76,14 @@ const handleMintChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
  return (
  <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
- <div className="w-full max-w-md mx-auto">
- <div className="text-center mb-8">
- <h1 className="text-4xl font-bold text-gray-800 dark:text-white">Mint Your NFT on SUI</h1>
- <p className="text-gray-600 dark:text-gray-400 mt-2">Create your unique loyalty card on the Sui network.</p>
+ <div className="w-full max-w-lg mx-auto">
+ <div className="text-center mb-10">
+ <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Mint Your NFT on SUI</h1>
+ <p className="text-xl text-gray-600 dark:text-gray-400 mt-6">Create your unique loyalty card on the Sui network.</p>
  </div>
 
- <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 mb-6 text-center">
- <h2 className="text-xl font-bold text-gray-700 dark:text-white mb-4">Connect Your Wallet</h2>
+ <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-8 mb-8 text-center">
+ <h2 className="text-3xl font-bold text-gray-700 dark:text-white mb-6">Connect Your Wallet</h2>
  <div className="flex justify-center">
    <ConnectButton />
  </div>
@@ -91,23 +91,23 @@ const handleMintChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
  <div className="space-y-6">
  {/* Package ID Input */}
- <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6">
- <label htmlFor="packageId" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Package ID</label>
+ <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
+ <label htmlFor="packageId" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Package ID</label>
  <input
  id="packageId"
  type="text"
  value={packageId}
  onChange={(e) => setPackageId(e.target.value)}
  placeholder="Enter the Package ID"
- className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+ className="mt-2 block w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 text-base"
  />
  </div>
 
  {/* Mint Loyalty Card Form */}
- <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6">
- <div className="space-y-4">
+ <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
+ <div className="space-y-6">
  <div>
- <label htmlFor="customerId" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Wallet Address</label>
+ <label htmlFor="customerId" className="block text-lg font-medium text-gray-700 dark:text-gray-300">Wallet Address</label>
  <input
  id="customerId"
  type="text"
@@ -115,11 +115,11 @@ const handleMintChange = (e: React.ChangeEvent<HTMLInputElement>) => {
  value={mintForm.customerId}
  onChange={handleMintChange}
  placeholder="Enter Customer Sui Address"
- className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+ className="mt-2 block w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 text-base"
  />
  </div>
  <div>
- <label htmlFor="imageUrl" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Image URL</label>
+ <label htmlFor="imageUrl" className="block text-base font-medium text-gray-700 dark:text-gray-300">Image URL</label>
  <input
  id="imageUrl"
  type="text"
@@ -127,13 +127,13 @@ const handleMintChange = (e: React.ChangeEvent<HTMLInputElement>) => {
  value={mintForm.imageUrl}
  onChange={handleMintChange}
  placeholder="Enter Image URL for your NFT"
- className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+ className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 text-base"
  />
  </div>
  <button
  onClick={mintLoyalty}
  disabled={loading || !mintForm.customerId.trim() || !mintForm.imageUrl.trim() || !packageId.trim()}
- className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-gray-400 disabled:cursor-not-allowed"
+ className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 disabled:bg-gray-400 disabled:cursor-not-allowed"
  >
  {loading ? (
  <>
