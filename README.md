@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧾 Sui NFT Minting dApp – Loyalty Card
 
-## Getting Started
+A decentralized application (dApp) built with Next.js and @mysten/dapp-kit that enables minting "Loyalty Card" NFTs on the Sui blockchain.
 
-First, run the development server:
+## 🚀 Features
+
+- **Wallet Integration**: Seamless connection with Sui-compatible wallets
+- **NFT Minting**: Create Loyalty Card NFTs with custom images
+- **Real-time Feedback**: Dynamic UI updates for transaction status
+- **Dark Mode**: Full support for system color preferences
+- **Modern Stack**: Built with Next.js 15, React 19, and TypeScript
+
+## 🧱 Tech Stack
+
+| Category   | Technologies |
+|------------|-------------|
+| Frontend   | Next.js, React, Tailwind CSS |
+| Blockchain | @mysten/dapp-kit, @mysten/sui |
+| Language   | TypeScript |
+## ⚙️ Getting Started
+
+This guide walks you through deploying your smart contract and running the frontend locally.
+
+### Prerequisites
+
+- Node.js (v20+ recommended)
+- Package manager: npm, yarn, pnpm, or bun
+- Sui CLI installed and configured
+- Sui-compatible wallet (e.g., Sui Wallet, WELLDONE Wallet)
+
+
+### 🌐 Step 2: Frontend Setup
+
+#### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd sui_workshop
+```
+
+#### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+#### 3. Start Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Your app will be available at [http://localhost:3000](http://localhost:3000)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧑‍💻 Usage Guide
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Connect Your Wallet**
+   - Click the "Connect Wallet" button
+   - Authorize your Sui-compatible wallet when prompted
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Configure Package ID**
+   - Paste the Package ID from your deployed contract
+   - This links the frontend to your smart contract
 
-## Learn More
+3. **Mint Your NFT**
+   - Enter the recipient's Sui wallet address
+   - Provide a public image URL for the NFT
+   - Click "Mint your NFT"
+   - Confirm the transaction in your wallet
 
-To learn more about Next.js, take a look at the following resources:
+4. **Monitor Status**
+   - Watch for real-time feedback on transaction status
+   - Success/error messages will appear automatically
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is MIT licensed.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
