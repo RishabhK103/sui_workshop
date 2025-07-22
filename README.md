@@ -1,5 +1,7 @@
 # 🧾 Sui NFT Minting dApp – Loyalty Card
 
+![Sui NFT Minting dApp Screenshot](public/screenshot.png)
+
 A decentralized application (dApp) built with Next.js and @mysten/dapp-kit that enables minting "Loyalty Card" NFTs on the Sui blockchain.
 
 ## 🚀 Features
